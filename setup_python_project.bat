@@ -1,8 +1,8 @@
-:: Batch script to setup Python virtual environment and launch editor
+:: Batch script to setup Python virtual environment and launch editor or CMD
 :: Author: Rasmus Vest Nielsen
 
 :: Create directories
-mkdir src libs shp raster results bin
+mkdir src libs shp rst results bin
 
 :: Check if current virtual environment exists and if not create one
 @echo off
@@ -40,11 +40,9 @@ echo """!\n!!\n!Date: %today%!\n!!\n!%content%!\n!""" > src\main.py
 set /p "answer=Do you want to launch Pycharm? (y/n): "
 
 if %answer%==y (
-	:: Launch Pycharm
-	Pycharm . --line 0 src\main.py
+    :: Launch Pycharm
+    Pycharm . --line 0 src\main.py
 ) else (
-	echo bye!
-)
-
-:: Launch CMD inside this directory
-%windir%\system32\cmd.exe
+    :: Launch CMD inside this directory
+    %windir%\system32\cmd.exe /k.\venv\Scripts\activate.bat
+) 
