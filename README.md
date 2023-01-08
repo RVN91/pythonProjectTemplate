@@ -1,12 +1,16 @@
 # pythonProjectTemplate
 
-This script initializes my personal folder structure for Python projects. The scripts does the follwing:
+These scripts initializes my personal folder structure for Python projects. The scripts does the follwing:
 
-**setup_python_project.bat**
+**setup_project.bat**
 
 * Creates project directories
 * Creates virtualenv if installed
 * Launches Pycharm
+
+**cleanup.bat**
+
+* Deletes project folders recursively 
 
 **todo_check.bat**
 
