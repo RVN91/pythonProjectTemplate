@@ -35,7 +35,7 @@ if %Day% GTR 9 (
 
 echo """!\n!!\n!Date: %today%!\n!!\n!%content%!\n!""" > src\main.py
 
-:: Prompt user for launching Pycharm
+:: Prompt user for launching Pycharm or CMD
 @echo off
 set /p "answer=Do you want to launch Pycharm? (y/n): "
 
